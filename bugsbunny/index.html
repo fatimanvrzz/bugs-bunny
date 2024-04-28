@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css"/>
+    <title>Naber cnm</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>
+          Naber cınım <br>
+          Benimle rakip olabilir misin?</h1>
+      </div>
+      <img src="https://facts.net/wp-content/uploads/2021/01/Bugs-Bunny-lays-on-his-back-with-carrot-in-hand-Cartoon-character.jpg" height="250px" width="450px" alt="">
+      <div class="button">
+        <button class="btn" id="yesButton" onmouseover="moveButton()" onclick="moveButton()">Yes</button>
+        <button
+          class="btn"
+          id="noButton" onlick="nextPage()" 
+        >
+          No
+        </button>
+        <script>
+          function nextPage() {
+            window.location.href = "nextpage.html";
+          }
+
+          function moveButton() {
+            var x = Math.random() * (window.innerWidth - document.getElementById("yesButton").offsetWidth) - 85;
+            var y = Math.random() * (window.innerHeight - document.getElementById("yesButton").offsetHeight) - 48;
+            document.getElementById("yesButton").style.left = `${x}px`;
+            document.getElementById("yesButton").style.top = `${y}px`;
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
